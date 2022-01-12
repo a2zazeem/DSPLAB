@@ -77,10 +77,10 @@ void bfs(int source, int vert)
    		int i;
    		for(i = 0; i<vert; i++) 
 		{
-      		if(adjMatrix[vertexIndex][i] == 1 && visited[i] == 0)
-        	return i;
+      			if(adjMatrix[vertexIndex][i] == 1 && visited[i] == 0)
+        			return i;
    		}
-   return -1;
+  		return -1;
 }
 	
 	
@@ -155,16 +155,16 @@ void dfs(int source, int vert)
       int unvisitedVertex = getAdjUnvisitedVertex(stack[top]);
 
       //no adjacent vertex found
-      if(unvisitedVertex == -1) 
+      	if(unvisitedVertex == -1) 
 	  {
-        pop();
-      } 
-	  else 
+      		  pop();
+     	 } 
+	else 
 	  {
-        visited[unvisitedVertex] = 1;
-        printf("%d",unvisitedVertex);
-        push(unvisitedVertex);
-      }
+      	  visited[unvisitedVertex] = 1;
+      	  printf("%d",unvisitedVertex);
+       	  push(unvisitedVertex);
+     	 }
    }
 
    //stack is empty, search is complete, reset the visited flag        
